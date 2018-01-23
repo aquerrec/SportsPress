@@ -101,6 +101,7 @@ echo apply_filters( 'gallery_style', $gallery_style . "\n\t\t" );
 
 	foreach( $data as $team_id => $row ):
 
+		if ( $number == 1 && $id != $team_id ) continue;
 		if ( isset( $limit ) && $i >= $limit ) continue;
 
 		$caption = get_the_title( $team_id );
